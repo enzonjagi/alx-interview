@@ -4,9 +4,10 @@
     representing the pascal triangle
 """
 
+
 def pascal_tri(n):
     '''Creates the inner lists version of pascal's triangle
-    
+
     Parameters: Counter of the pascal triangle
     Output: a single list to be added to the pascal triangle
     '''
@@ -19,8 +20,8 @@ def pascal_tri(n):
     if n == 1:
         return [1]
     elif n == 2:
-        return[1,1]
-    
+        return[1, 1]
+
     previous = pascal_tri(n-1)
     for i in range(len(previous) - 1):
         left = previous[i]
@@ -33,7 +34,7 @@ def pascal_triangle(n):
     '''Returns a pascal triangle in list form
 
     Parameters: n
-    Returns: an empty list or 
+    Returns: an empty list or
         a list representing the pascal triangle of length n
     '''
 
@@ -41,7 +42,7 @@ def pascal_triangle(n):
     counter = 1
 
     if n <= 0:
-        return []    
+        return []
     while counter <= n:
         final_list.append(pascal_tri(counter))
         counter += 1
